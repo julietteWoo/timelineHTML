@@ -1,0 +1,94 @@
+
+  #timeline {
+    width: 80%;
+    height: 350px;
+    overflow: hidden;
+    margin: 30px auto;
+    position: relative;
+    background: url('../images/dot.gif') left 45px repeat-x;
+  }
+
+    #dates {
+      width: 90%;
+      height: 60px;
+      overflow: hidden;
+    }
+      #dates li {
+        list-style: none;
+        float: left;
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+        text-align: center;
+        background: url('../images/biggerdot.png') center bottom no-repeat;
+      }
+        #dates a {
+          line-height: 18px;
+          padding-bottom: 10px;
+        }
+        #dates .selected {
+              font-size: 18px;
+        }
+
+      #dates .trafficLight_Red {
+        background: url('../images/biggerdot-red.png') center bottom no-repeat;
+      }
+      #dates .trafficLight_Green {
+        background: url('../images/biggerdot-green.png') center bottom no-repeat;
+      }
+      #dates .trafficLight_Yellow {
+        background: url('../images/biggerdot-yellow.png') center bottom no-repeat;
+      }
+      #dates .trafficLight_White {
+        background: url('../images/biggerdot.png') center bottom no-repeat;
+      }
+    
+    #issues {
+      height: 370px;
+      overflow: hidden;
+      text-align: center;
+    } 
+    #issues li {
+      height: 370px;
+      list-style: none;
+      float: left;
+    }
+      #issues li h1 {
+        font-size: 48px;
+        margin: 20px 0;
+      }
+      #issues li p {
+        font-size: 14px;
+        margin-right: 70px;
+        font-weight: normal;
+        line-height: 22px;
+      }
+    #next,
+    #prev {
+      position: absolute;
+      top: 0;
+      font-size: 70px;
+      top: 200px;
+      width: 22px;
+      height: 38px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+      #next:hover,
+      #prev:hover {
+        background-position: 0 -76px;
+      }
+      #next {
+        right: 0;
+        background-image: url('../images/next.png');
+      }
+      #prev {
+        left: 0;
+        background-image: url('../images/prev.png');
+      }
+        #next.disabled,
+        #prev.disabled {
+          opacity: 0.2;
+        }

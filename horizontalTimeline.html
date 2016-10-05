@@ -1,0 +1,97 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Made with ❤ by Jorge Epuñan - @csslab">
+	
+	<title>Simple jQuery Timeline</title>
+	<link rel="stylesheet" href="css/timeline.css" media="screen" />
+	<link rel="stylesheet" href="css/theme.css" media="screen" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/timeline.js"></script>
+	<script>
+		$(function(){
+			$().timelinr({
+				arrowKeys: 'true'
+			})
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="timeline">
+		<ul id="dates">
+			<li class="trafficLight_Red"><a href="#first">1901</a></li>
+			<li class="trafficLight_Green"><a href="#second">1935</a></li>
+			<li class="trafficLight_Yellow"><a href="#third">1947</a></li>
+			<li class="trafficLight_White"><a href="#forth">1952</a></li>
+			<li class="trafficLight_Green"><a href="#fifth">1973</a></li>
+			<li class="trafficLight_Green"><a href="#sixth">1978</a></li>
+			<li class="trafficLight_Yellow"><a href="#seventh">1986</a></li>
+			<li class="trafficLight_Red"><a href="#eighth">2000</a></li>
+		</ul>
+		<ul id="issues">
+			<li id="first">
+				<h1><a href="#">1901</a></h1>
+				<p>This is the first thing happen in my life in 1901. It's said so it's red light.</p>
+				<p>I won't tell you the story about it. I feel boring.</p>
+				<p>I was born in this year, which was the worst thing in the whole year.</p>
+				<p>You can change the link of the title of the paragrgh to direct you to somewhere else.</p>
+			</li>
+			<li id="second">
+				<h1><a href="#">1935</a></h1>
+				<p>This year, there's something happy happend to me</p>
+				<p>That's why it is green light.</p>
+				<p>I'm a scrollbale timeline now</p>
+			</li>
+			<li id="third">
+				<h1><a href="#">1947</a></h1>
+				<p>Don't pick me on my spelling</p>
+				<p>I'm not good at it, and so what?</p>
+				<p>Today is so soso</p>
+				<p>I put my whole year as yellow light</p>
+			</li>
+			<li id="forth">
+				<h1>1952</h1>
+				<p>my size was adjustable to suit the window size.</p>
+				<p>My mum said if I put white color for the white light then it will invisible.</p>
+				<p>So I use orange</p>
+				<p>Do you know that, you can customize the traffic light style of even not use it by change the pictures in the images folder and modify(comment on line 33-line 44) timeline.css</p>
+			</li>
+			<li id="fifth">
+				<h1>1973</h1>
+				<p>I was happy again.</p>
+				<p>I felt I was useful</p>
+				<p>The purpose of my life is keep simple and easy to read, so that anyone can modify me based on their project requirement</p>
+			</li>
+			<li id="sixth">
+				<h1>1978</h1>
+				<p>Do you know that I am a handsome guy.</p>
+				<p>Oh, no. I'm not</p>
+				<p>Actually, I'm not a guy</p>
+				<p>Actually, I'm not a girl</p>
+			</li>
+			<li id="seventh">
+				<h1>1986</h1>
+				<p>This is a very important year to me.</p>
+				<p>It is really important.</p>
+				<p>BTW, the timeline.css and timeline.js is used for my timeline functions</p>
+				<p>And use can copy from line 24-line 93 to import me into you webpage as a module, and modify the content.
+			</li>
+			<li id="eighth">
+				<h1>2000</h1>
+				<p>The last message I want to show you are</p>
+				<p>I was just modified by some others work, but I was meet my mother's project requirement.And my mum think that I might suitable for someone else's work as well</p>
+				<p>That's why I shared myself here</p>
+				<p>I don't use lots of styles, so you can easily fit me into your styled webpage. I don't need to use theme.css in css folder if you use your own style.</p>
+				<p>Also you can modify the theme.css for styling</p>
+			</li>
+		</ul>
+		<a href="#" id="next">+</a>
+		<a href="#" id="prev">-</a>
+	</div>
+
+</body>
+</html>
