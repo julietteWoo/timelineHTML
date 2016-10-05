@@ -44,12 +44,14 @@
       }
     
     #issues {
-      height: 370px;
+      /*you can make height adjustable to suit your needs*/
+      height: 400px;
       overflow: hidden;
       text-align: center;
     } 
     #issues li {
-      height: 370px;
+      /*you can make height adjustable to suit your needs*/
+      height: 400px;
       list-style: none;
       float: left;
     }
