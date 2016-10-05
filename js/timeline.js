@@ -27,10 +27,11 @@ jQuery.fn.timelinr = function(options){
       var currentDate = $(settings.datesDiv).find('a.'+settings.datesSelectedClass);
       var currentIssue = $(settings.issuesDiv).find('li.'+settings.issuesSelectedClass);
       var widthContainer = $(settings.containerDiv).width();
-      var heightContainer = $(settings.containerDiv).height();
+      //you can modify here to adjust the ratio of width between the timeline and issues(content)
       var widthIssues =$(settings.containerDiv).width();
-      var heightIssues = $(settings.issuesDiv).height();
       var widthIssue = $(settings.containerDiv).width();
+      var heightContainer = $(settings.containerDiv).height();
+      var heightIssues = $(settings.issuesDiv).height();
       var heightIssue = $(settings.issuesDiv+' li').height();
       var widthDates = $(settings.datesDiv).width();
       var heightDates = $(settings.datesDiv).height();
@@ -51,12 +52,11 @@ jQuery.fn.timelinr = function(options){
         // first vars
         var whichIssue = $(this).text();
         var currentIndex = $(this).parent().prevAll().length;
-        // moving the elements
- 
-          $(settings.issuesDiv).animate({'marginLeft':-widthIssue*currentIndex},{queue:false, duration:settings.issuesSpeed});
-        
 
+        // moving the elements
+        $(settings.issuesDiv).animate({'marginLeft':-widthIssue*currentIndex},{queue:false, duration:settings.issuesSpeed});
         $(settings.issuesDiv+' li').animate({'opacity':settings.issuesTransparency},{queue:false, duration:settings.issuesSpeed}).removeClass(settings.issuesSelectedClass).eq(currentIndex).addClass(settings.issuesSelectedClass).fadeTo(settings.issuesTransparencySpeed,1);
+        
         // prev/next buttons disappears on first/last issue 
         if(howManyDates == 1) {
           $(settings.prevButton+','+settings.nextButton).fadeOut('fast');
@@ -82,11 +82,11 @@ jQuery.fn.timelinr = function(options){
             $(settings.nextButton+','+settings.prevButton).fadeIn('slow');
           }
         }
+
         // now moving the dates
         $(settings.datesDiv+' a').removeClass(settings.datesSelectedClass);
         $(this).addClass(settings.datesSelectedClass);
-
-          $(settings.datesDiv).animate({'marginLeft':defaultPositionDates-(widthDate*currentIndex)},{queue:false, duration:'settings.datesSpeed'});
+        $(settings.datesDiv).animate({'marginLeft':defaultPositionDates-(widthDate*currentIndex)},{queue:false, duration:'settings.datesSpeed'});
         
       });
 
@@ -174,6 +174,7 @@ jQuery.fn.timelinr = function(options){
           }
         }
       });
+
       // keyboard navigation
       if(settings.arrowKeys=='true') {
     
@@ -187,6 +188,7 @@ jQuery.fn.timelinr = function(options){
           });
       
       }
+      
       // default position startAt
       $(settings.datesDiv+' li').eq(settings.startAt-1).find('a').trigger('click');
      
